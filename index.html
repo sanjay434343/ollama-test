@@ -1190,7 +1190,7 @@ async function sendMsg() {
   const hist = getActiveMsgs().slice(-14).filter(m=>m.role!=='system');
 
   try {
-    const res = await fetch('https://573c-2409-40f4-4022-37d3-d0f8-a8e6-97c5-8446.ngrok-free.app/chat', {
+    const res = await fetch('https://3ca8-2409-40f4-111c-7780-b821-e56e-3bd8-763.ngrok-free.app/chat', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ message: msg, system: buildSys(), history: hist.slice(0,-1) }),
