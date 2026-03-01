@@ -761,7 +761,7 @@ function mergeMem(ex){
 async function extractMem(conv){
   const ctx=conv.messages.slice(-6).map(m=>(m.role==='user'?'User':'Matrix')+': '+m.content.slice(0,400)).join('\n\n');
   try{
-    const r=await fetch('http://localhost:3000/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+    const r=await fetch('https://573c-2409-40f4-4022-37d3-d0f8-a8e6-97c5-8446.ngrok-free.app//chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
       messages:[{role:'system',content:'Extract facts. Return ONLY valid JSON. No markdown.'},{role:'user',content:ctx+'\n\n'+MEM_EXTRACT}],
       _mem_extract:true
     })});
@@ -949,7 +949,7 @@ async function sendMsg(){
 
   let reply='', reasoning='';
   try{
-    const res=await fetch('https://4990-2409-40f4-11c-4b9c-50c-6b48-ae6f-f126.ngrok-free.app/chat',{
+    const res=await fetch('https://573c-2409-40f4-4022-37d3-d0f8-a8e6-97c5-8446.ngrok-free.app//chat',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         message:txt,
