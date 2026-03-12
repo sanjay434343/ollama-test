@@ -791,7 +791,7 @@ async function sendMessage(){
   const thinking=showThinking();
   const t0=Date.now();
   try{
-    const res=await fetch('https://81dc-2401-4900-ca71-860b-153f-645a-a34-fe64.ngrok-free.app/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg})});
+    const res=await fetch('https://a6b4-2401-4900-924c-ea90-9da3-bcd4-51b4-d75e.ngrok-free.app/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg})});
     const data=await res.json();thinking.remove();
     if(!res.ok){appendError('⚠️ '+(data.error||'Something went wrong. Try again!'));}
     else{
